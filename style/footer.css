@@ -1,0 +1,146 @@
+@import url(font.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto; }
+
+footer {
+  background-color: #313131;
+  margin-top: 10rem; }
+  footer .footer__top {
+    padding: 2rem 0;
+    width: 80%;
+    margin: 0 auto;
+    display: flex; }
+    footer .footer__top--left {
+      color: #868685;
+      width: 50%;
+      display: flex; }
+      footer .footer__top--left ul {
+        margin-top: 0.5rem; }
+      footer .footer__top--left li::before {
+        padding-right: 1.1rem; }
+      footer .footer__top--left--email {
+        margin-left: auto; }
+    footer .footer__top--right {
+      width: 40%;
+      margin-left: auto; }
+      footer .footer__top--right input {
+        width: 90%;
+        height: 40px; }
+      footer .footer__top--right label {
+        position: absolute;
+        background: #3fb871;
+        color: white;
+        line-height: 40px;
+        padding: 0 12px; }
+  footer hr {
+    border: none;
+    border-top: 1px solid #868685; }
+  footer .footer__content {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    padding: 3rem 0; }
+    footer .footer__content--left {
+      width: 32%; }
+      footer .footer__content--left p {
+        display: block;
+        padding: 0.7rem;
+        font-size: 0.8rem;
+        color: #a2a2a2; }
+      footer .footer__content--left p::before {
+        color: #3fb871;
+        padding-right: 10px; }
+    footer .footer__content--right {
+      width: 60%;
+      margin-top: 2rem;
+      margin-left: auto;
+      display: flex; }
+      footer .footer__content--right--item {
+        padding-right: 2rem; }
+      footer .footer__content--right h5 {
+        color: #3fb871; }
+      footer .footer__content--right ul {
+        color: #a2a2a2;
+        padding-top: 1.2rem; }
+        footer .footer__content--right ul li {
+          display: block;
+          font-weight: 100;
+          font-size: 12px;
+          padding: 10px 0; }
+          footer .footer__content--right ul li::before {
+            font-weight: bold;
+            font-size: 8px; }
+  footer hr {
+    border: none;
+    border-top: 1px solid #868685; }
+  footer .footer__bottom {
+    display: flex;
+    padding: 2rem 0;
+    width: 80%;
+    margin: 0 auto; }
+    footer .footer__bottom--left ul {
+      display: flex;
+      list-style-type: none;
+      color: #a2a2a2;
+      font-size: 13px; }
+      footer .footer__bottom--left ul li {
+        padding: 0 10px; }
+    footer .footer__bottom--right {
+      margin-left: auto; }
+      footer .footer__bottom--right ul {
+        padding-right: 2rem; }
+        footer .footer__bottom--right ul li {
+          padding: 0 10px;
+          color: #a2a2a2;
+          font-size: 1.5rem; }
+  footer .footer__design {
+    width: 100%;
+    background: #434343;
+    color: white;
+    text-align: center;
+    padding: 20px 0; }
+
+@media (max-width: 750px) {
+  footer .footer__top {
+    flex-direction: column; }
+    footer .footer__top .footer__top--left {
+      flex-direction: column;
+      width: 100% !important;
+      margin-bottom: 1rem; }
+      footer .footer__top .footer__top--left--icon {
+        width: 100%;
+        margin-bottom: 2rem;
+        color: #3fb871; }
+      footer .footer__top .footer__top--left ul {
+        color: white; }
+      footer .footer__top .footer__top--left--email {
+        width: 100%; }
+        footer .footer__top .footer__top--left--email h5 {
+          display: inline-block;
+          color: #3fb871;
+          padding: 0 2px; }
+    footer .footer__top .footer__top--right {
+      width: 100%; }
+      footer .footer__top .footer__top--right-input {
+        width: 100%; }
+  footer .footer__content {
+    width: 100%;
+    flex-direction: column; }
+    footer .footer__content .footer__content--left {
+      width: 100%; }
+      footer .footer__content .footer__content--left p:nth-child(3) {
+        display: none; }
+      footer .footer__content .footer__content--left p:nth-child(4) {
+        display: none; }
+    footer .footer__content .footer__content--right {
+      width: 100%;
+      flex-direction: column; }
+      footer .footer__content .footer__content--right--item {
+        margin-bottom: 1.5rem; }
+  footer hr {
+    display: none; }
+  footer .footer__bottom {
+    display: none !important; } }

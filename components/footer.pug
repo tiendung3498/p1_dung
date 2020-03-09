@@ -1,0 +1,46 @@
+include array.pug
+footer
+    .footer__top
+        .footer__top--left
+            .footer__top--left--icon
+                h5 KÊNH THÔNG TIN TỪ CHÚNG TÔI : 
+                ul
+                  li(class="fab fa-facebook-f")
+                  li(class="fab fa-twitter")
+                  li(class="fab fa-youtube")
+                  li(class="fab fa-vimeo-v")
+            .footer__top--left--email 
+                h5 ĐĂNG KÝ NHẬN 
+                h5 EMAIL TỪ CHÚNG TÔI
+        .footer__top--right
+            .footer__top--right-input
+                input(type="text" id="inputsignin")
+                label(for="inputsignin" class="fas fa-paper-plane")
+    hr      
+    .footer__content
+        .footer__content--left
+               img(src="../img/logo-footer.png", alt="")
+               p Green shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển
+               p(class="fas fa-mobile-alt") Điện thoại : (84-4) 66.558.868
+               p(class="far fa-envelope") Email : info@dkt.com.vn
+        .footer__content--right
+            .footer__content--right--item
+                 +footerItem('THÔNG TIN KHÁCH HÀNG',footerItem1)
+            .footer__content--right--item
+                 +footerItem('HỖ TRỢ DỊCH VỤ',footerItem2)
+            .footer__content--right--item
+                 +footerItem('CHÍNH SÁCH ƯU ĐÃI',footerItem3)
+            .footer__content--right--item
+                 +footerItem('TIN TỨC',footerItem4)
+    hr                
+    .footer__bottom
+        .footer__bottom--left
+            ul
+                each i in footerbottom
+                   li= i
+        .footer__bottom--right    
+            ul
+                each i in iconPay
+                    li(class="fab fa-cc-"+i)
+    .footer__design Thiết kế bởi Bizweb 
+        i(class="far fa-copyright")
