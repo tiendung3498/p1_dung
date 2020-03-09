@@ -1,0 +1,56 @@
+include array.pug
+header
+    .header__top
+        .header__top--container
+            div.openTime
+                    p open time:8:00-18:00 Monday-Sunday
+                    i(class="fab fa-facebook-f")
+                    i(class="fab fa-twitter")
+                    i(class="fab fa-tumblr")
+                    i(class="fab fa-vimeo-v")
+            div.login__logout
+                    div.login
+                        i(class="fas fa-user") đăng nhập
+                    div.logout
+                        i(class="fas fa-user-plus") đăng kí
+        .header__background
+            .header__content
+                .header__content--logo
+                .header__content--search
+                    .header__content--search--hotline
+                        i(class="fas fa-phone-alt")   HỖ TRỢ: (04) 6674 2332 - (04) 3786 8904
+                    .header__content--search--search
+                        input(type="text" id="search" placeholder="Tìm kiếm...")
+                        label(for="search" class="fas fa-search")
+                 
+                    .header__content--search--cart
+                        i(class="fas fa-shopping-basket") 0 Sản phẩm
+    .header-navbar
+        ul.header-navbar__menu
+            li.header-navbar__menu-item
+                a(class="fas fa-bars" href="#")
+            each val,index in menu
+                if index == 2
+                    li.header-navbar__menu-item
+                        a(href="#")= val
+                            i(class="fas fa-caret-down")
+                else if index == 3
+                    li.header-navbar__menu-item
+                        a(href="#")= val
+                            i(class="fas fa-caret-down")
+                else
+                    li.header-navbar__menu-item
+                        a(href="#")= val
+    .header-nav-hide
+        input(type="checkbox" id="nav-check")
+        .header-nav-hide__btn
+            label(for="nav-check")
+                span
+                span
+                span
+        .header-nav-hide__group
+            i(class="fas fa-search")
+            i(class="fas fa-shopping-basket")
+        .header-nav-hide__nav-links
+            each item in menu
+               a(href="#")= item
