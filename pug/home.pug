@@ -1,0 +1,96 @@
+include ../components/mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Green Shop
+    link(rel="stylesheet", href="../style/style.css")
+    link(rel="stylesheet", href="../fontawesome/css/all.css")
+  body
+    include ../components/header.pug
+    section.banner
+      .banner__slides
+        each i in [1,2,3]
+          .banner__slides--item
+             img(src="../img/slide-1920x590.png", alt="")
+      .banner__icon
+          ul
+            each i in [1,2,3]
+              li
+          span         
+    section.hotproduct
+      .hotproduct__title
+         h4 Sản phẩm nổi bật
+      .hotproduct__grid
+         .hotproduct__grid--left
+            .hotproduct__grid--left--big
+              +big('hotproduct__grid--left--big--new','../img/spx2-4.png','Cây chân chim','250.000đ','250.000 đ')
+            +small__nosale('hotproduct__grid--left--small','../img/spx2-5.png','Cây dạ lam','50.000 đ','250.000 đ')                  
+            +small__nosale('hotproduct__grid--left--small','../img/spx2-6.png','Cây danh dự','850.000 đ','250.000 đ')                  
+         .hotproduct__grid--right
+            +small('saleproduct__grid--right--grid--item--newred','../img/spx2-5.png','Cây cọ ta','250.000 đ','250.000 đ')                  
+            +small('hotproduct__grid--left--small--new','../img/spx2-15.png','Cây dứa nhỏ','375.000 đ','250.000 đ')                  
+            .hotproduct__grid--right--big
+              +big('hotproduct__grid--right--big--newred','../img/spx2-3.png','Cây chân chim','250.000đ','250.000 đ') 
+    section.saleproduct 
+      .saleproduct__grid
+        .saleproduct__grid--left
+            .saleproduct__grid--left--title
+              h4 Sản phẩm mua nhiều
+            each item in bestProduct  
+              +sale__small('saleproduct__grid--left--item',item.img,item.name,item.price,item.del)
+            +sale__small('saleproduct__grid--left--item--final','../img/spx2-1.png','Cây đa búp đỏ','250.000 đ')          
+        .saleproduct__grid--right
+          .saleproduct__grid--right--title
+            h4 Sản phẩm khuyến mãi
+            div
+               span(class="fas fa-chevron-left")
+               span(class="fas fa-chevron-right")
+          .saleproduct__grid--right--grid 
+              +small('saleproduct__grid--right--grid--item--newred','../img/spx2-15.png','Cây chân chim','250.000 đ','250.000 đ')
+              +small('saleproduct__grid--right--grid--item--newred','../img/spx2-7.png','Cây Dạ Lam','500.000 đ','250.000 đ')                  
+              each item in saleProduct
+                +small__nosale('saleproduct__grid--right--grid--item',item.img,item.name,item.price,item.del)                             
+    section.banner__slide
+           img(src="../img/banner-11140x217.png", alt="")
+    section.newproduct
+        .newproduct__title
+          +title__icon('Sản phẩm mới')
+        .newproduct__grid
+          mixin newproduct__item(img,title,price,del)
+            .newproduct__grid--item
+              .newproduct__grid--item--new NEW
+              .newproduct__grid--item--image
+                   img(src=img, alt="")
+                   div
+                   p
+                      a(href="#") Mua Ngay
+                      a(href="" class="-search fas fa-search")
+              p.newproduct__grid--item--title= title
+              span
+                  i(class="fas fa-star")
+                  i(class="fas fa-star")
+                  i(class="fas fa-star")
+                  i(class="fas fa-star")
+                  i(class="fas fa-star-half-alt")
+              p.newproduct__grid--item--price= price
+                  del= del
+          +small('newproduct__grid--item--new','../img/spx2-11.png','Cây Chân Chim','250.000 đ','250.000 đ')
+          each item in newProduct        
+            +small__nosale('newproduct__grid--item',item.img,item.name,item.price,item.del) 
+    section.news 
+          .news__title
+             +title__icon('Tin tức')
+          .news__flex
+              mixin item(srcimg)
+                .news__flex--item
+                  img(src=srcimg, alt="")
+                  span Thứ 7 ,ngày 31, tháng 12, năm 2015
+                  h5 15 thiết kế phòng ngủ tuyệt đẹp làm vạn người mê
+                  p Cùng Sài Gòn Hoa tìm hiểu một vài xu hướng thiết kế sân vườn được ưa chuộng hiện nay nhé ! Kết hợp hàng rào
+                  a(href="#") đọc tiếp
+              +item('../img/img-news-1.png')
+              +item('../img/img-news-2.png')
+              +item('../img/img-1.png')
+    include ../components/footer.pug               

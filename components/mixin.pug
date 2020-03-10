@@ -1,0 +1,169 @@
+include array.pug
+mixin big(classs,img,title,price,del)
+    div(class= classs) NEW
+    .hotproduct__grid--left--big--image
+        img(src=img, alt="")
+        div
+        p
+            a(href="#") Mua Ngay
+            a(href="" class="-search fas fa-search")
+    p.hotproduct__grid--left--big--title= title
+        span
+            i(class="fas fa-star")
+            i(class="fas fa-star")
+            i(class="fas fa-star")
+            i(class="fas fa-star")
+            i(class="fas fa-star-half-alt")
+    p.hotproduct__grid--left--big--price= price
+        del= del
+mixin small(classs,img,title,price,del)
+    .hotproduct__grid--left--small
+        div(class= classs) NEW
+        .hotproduct__grid--left--small--image
+            img(src=img, alt="")
+            div
+            p
+                a(href="") Mua Ngay
+                a(class="-search fas fa-search")
+        p.hotproduct__grid--left--small--title= title
+            span
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star-half-alt")
+        p.hotproduct__grid--left--small--price= price
+            del= del
+
+mixin small__nosale(classs,img,title,price,del)
+    div(class=""+classs)
+        div(class=""+classs+'--image')
+            img(src=img, alt="")
+            div
+            p
+               a(href="#") Mua Ngay
+               a(href="" class="-search fas fa-search")
+        p(class=""+classs+'--title')= title
+            span
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star-half-alt")
+        p(class=""+classs+'--price')= price
+            del= del                
+mixin sale__small(classs,img,title,price)    
+    div(class= classs)
+        img(src=img, alt="")
+        div
+            a(href="")= title
+            span
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star")
+                i(class="fas fa-star-half-alt")
+            p= price
+mixin title(cl,active)
+    div(class=""+cl)
+        div Home /
+           a(href="#")= active
+mixin title__icon(title)
+    h4= title
+    div
+        span(class="fas fa-chevron-left")
+        span(class="fas fa-chevron-right")                       
+mixin grid__left__category__title(title)
+    div(class="grid__content--left--category--title list__content--left--category--title news__content--left--category--title detailNews__content--left--category--title ")
+        h4= title
+        div    
+mixin grid__left__category1(title,items)
+    +grid__left__category__title(title)
+    each item in items
+       p(class="fas fa-chevron-right")= item
+mixin grid__left__category2(title,items)
+    +grid__left__category__title(title)
+    each item in items
+       p(class="fas fa-chevron-right")= item
+mixin grid__left__category3(title,p1,p2,p3,p4,p5,p6)
+    +grid__left__category__title(title)
+    .color
+        each val,classs in {c1:p1,c2:p2,c3:p3,c4:p4,c5:p5,c6:p6}
+           span(class=""+classs)= val
+mixin grid__left__category(cl)
+        div(class=""+cl)       
+            div(class=""+cl+'--category')
+                +grid__left__category1('Danh mục sản phẩm',category1)
+            div(class=""+cl+'--category')
+                +grid__left__category2('Tìm theo giá',category2)
+            div(class=""+cl+'--category')
+                +grid__left__category3('Tìm theo màu','Xanh cây','Đỏ lam','Tím','Xanh trời','Vàng','Hồng')
+mixin content__right__top(classs)
+            div(class=""+classs)
+               div(class=""+classs+'--image')
+               div(class=""+classs+'--category') 
+                   div(class=""+classs+'--category--left')
+                        span(class="fas fa-th ")
+                        span(class="fas fa-th-list")
+                   div(class=""+classs+'--category--right')
+                        span Sắp xếp theo
+                        div
+                            input(type="checkbox" id="dropdown1")
+                            ul
+                                each index in ['Tên sản phẩm','Loại sản phẩm','Giá','Màu']
+                                   li= index
+                            label(for="dropdown1") Tên sản phẩm  
+                                i(class="fas fa-sort-down")
+                        span show           
+                        div(style={'width':'60px'})
+                            input(type="checkbox" id="dropdown2")
+                            ul
+                                each index in [11,12,13,14,15]
+                                   li= index
+                            label(for="dropdown2") 15  
+                                i(class="fas fa-sort-down") 
+mixin list__item(srcimg)
+                    .list__content--right--list--item
+                        .list__content--right--list--item--image
+                           img(src=""+srcimg, alt="")
+                        .list__content--right--list--item--content
+                           p.title Cây ngọc ngân 
+                           span.rate
+                              each i in[i1,i2,i3,i4,i5]
+                                 i(class="fas fa-star")
+                           p.detail Cây Ngọc ngân là loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn tặng 'người ấy'. Ngọc ngân (Valentine) không chỉ đẹp ở phiến lá xanh đốm trắng.
+                           p.price 279.000 đ
+                           .btn__group
+                              a(href="#" class="buy") Mua ngay
+                              a(href="#" class="fas fa-search")
+                              a(href="#" class="item-right__btn-another -love fas fa-heart")
+mixin news__left(classs)
+        div(class=""+classs+'__content--left')
+          div(class=""+classs+'__content--left--category')
+               +grid__left__category1('Danh mục sản phẩm',category1)
+          +grid__left__category__title('Tin tức nổi bật')
+          div(class=""+classs+'__content--left--hot')
+            each src in ['../img/news-1.png','../img/news-2.png','../img/news-3.png','../img/news-4.png','../img/news-5.png']
+              div(class=""+classs+'__content--left--hot--index')
+                img(src=""+src, alt="")
+                span Hướng dẫn lựa chọn và bố trí cây xanh trong phòng khách
+          +grid__left__category__title('Blog tag')
+          div(class=""+classs+'__content--left--blog')
+              div(class=""+classs+"__content--left--blog active") Cây văn phòng
+              each title in ['Cây phát lộc','Cây xanh','Cây trang trí','Cây','Sức khỏe','Plants','Quà tặng','Lưu niệm']
+                 div= title
+mixin news__right__same(classs,src)
+            div(class=""+classs+'__content--right--item')
+                h3 Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên
+                div(class=""+classs+'__content--right--item--time')
+                  span(class="far fa-calendar-minus") 20/12/2015
+                  span(class="far fa-clock") 11:20:00 AM
+                  span(class="far fa-comment-dots") 0 Bình luận
+                div(class=""+classs+'__content--right--item--image')
+                  img(src=""+src, alt="")
+                p Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!   
+mixin footerItem(title,items)
+    h5= title
+    ul
+        each item in items
+            li(class="fas fa-chevron-right")= item
