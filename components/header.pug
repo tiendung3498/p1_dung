@@ -16,7 +16,6 @@ header
         .header__background
             .header__content
                 .header__content--logo
-                        //- img(src="../img/logo.png", alt="")
                 .header__content--search
                     .header__content--search--hotline
                         i(class="fas fa-phone-alt")   HỖ TRỢ: (04) 6674 2332 - (04) 3786 8904
@@ -53,14 +52,5 @@ header
             i(class="fas fa-search")
             i(class="fas fa-shopping-basket")
         .header-nav-hide__nav-links
-            a(href="#") TRANG CHỦ
-            a(href="#") GIỚI THIỆU
-            a(href="#") SẢN PHẨM
-            a(href="#") SẢN PHẨM MỚI
-            a(href="#") TIN TỨC
-            a(href="#") LIÊN HỆ
-        
-
-                     
-            
-          
+            each item in menu
+               a(href="#")= item
