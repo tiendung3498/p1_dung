@@ -1,0 +1,61 @@
+include ../components/mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include head.pug
+  body
+    include ../components/header.pug
+    +title('detail__title','Cây dạ lam')
+    .detail__content
+        .detail__content--mainProduct
+            .detail__content--mainProduct--left
+               img.img__main(src="../img/img-detail-1.png", alt="")
+               .img__more
+                    each srcimg in imageMoreDetail
+                        img(src=""+srcimg, alt="")
+            .detail__content--mainProduct--right
+                h3.name Cây dạ lam
+                span.rate
+                    each i in[1,2,3,4,5]
+                       i(class="fas fa-star")
+                h3.price 4.099.000 đ
+                     del 4.099.000 đ
+                each item in detailMainProduct
+                    p.detail__content--mainProduct--right--detail= item        
+                .detail__content--mainProduct--right--amount
+                    p Số lượng
+                    span.sub -
+                    span.amount 1
+                    span.add +
+                .detail__content--mainProduct--right--btn
+                    .btn__group
+                        a(href="#" class="buy") Mua ngay
+                        a(href="#" class="fas fa-search")
+                        a(href="#" class="item-right__btn-another -love fas fa-heart")
+                .detail__content--mainProduct--right--social
+                    a(href="#" class="fb")
+                        i(class="fab fa-facebook-square") Like
+                        span 0
+                    a(href="#" class="twitch")
+                        i(class="fab fa-twitter") Tweet
+                    a(href="#" class="gg")
+                        i(class="fab fa-google-plus-g")
+                        span 0
+                    a(href="#" class="share")
+                        i(class="fas fa-plus-square") Share
+
+        .detail__content--information
+            .detail__content--information--tab
+               each item in detailTab
+                 span= item
+            .detail__content--information--content
+                each item in detailProduct
+                   p= item
+                each item in detailSpan   
+                   span= item
+        .detail__content--title
+            +title__icon('Sản phẩm cùng loại')
+        .detail__content--product
+            each item in detailList
+               +small__nosale('detail__content--product--item',item.img,item.name,'250.000đ','250.000 đ')
+    include ../components/footer.pug
