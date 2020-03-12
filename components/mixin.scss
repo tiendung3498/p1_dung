@@ -1,3 +1,4 @@
+@import '../components/variable.scss';
 @mixin container() {
     width: 80%;
     margin: 0 auto;
@@ -209,17 +210,17 @@
                 border: 1px solid #d9dde0;
                 text-align: center;
                 &--new {
-                    @extend .hotproduct__grid--left--small--new;
+                    @extend #{$product}--new;
                 }
                 &--image {
-                    @extend .hotproduct__grid--left--small--image;
+                    @extend #{$product}--image;
                     img {
                         width: 100%;
                         height: 100%;
                     }
                 }
                 &--title {
-                    @extend .hotproduct__grid--left--small--title;
+                    @extend #{$product}--title;
                 }
                 span {
                     color: #febf01;
@@ -227,7 +228,7 @@
                     margin-top: 0.6rem;
                 }
                 &--price {
-                    @extend .hotproduct__grid--left--small--price;
+                    @extend #{$product}--price;
                     del {
                         padding-left: 0.7rem;
                         color: #c2c2c2;
@@ -499,4 +500,19 @@
     font-size: 0.85rem;
     padding-top: 0.85rem;
     margin-top: 2rem;
+}
+
+@mixin flex() {
+    width: 100%;
+    display: flex;
+}
+
+@mixin width90() {
+    width: 90%;
+}
+
+@mixin group_a() {
+    width: 35px;
+    height: 35px;
+    padding-top: $size_small;
 }
