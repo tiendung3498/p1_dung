@@ -1,0 +1,59 @@
+@import '../components/mixin.scss';
+@import '../components/variable.scss';
+@import'home.scss';
+@include title('grid__title');
+@include color();
+.grid__content {
+    @include container();
+    margin-top: 3.5rem;
+    display: flex;
+    @include grid__left('grid__content');
+    @include grid__right('grid__content');
+}
+
+@media (max-width:1200px) {
+    #{$hover}:hover p {
+        opacity: 0;
+    }
+}
+
+@media (max-width:800px) {
+    #{$grid_category} {
+        margin: 0;
+        span:nth-child(3) {
+            margin: 0;
+        }
+    }
+}
+
+@media (max-width:702px) {
+    .grid__content {
+        .grid__content--left {
+            width: 35%;
+        }
+        .grid__content--right {
+            width: 65%;
+            &--product {
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 1rem;
+            }
+            &--top--category--right {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width:592px) {
+    .grid__content {
+        .grid__content--left {
+            width: 45%;
+        }
+        .grid__content--right {
+            width: 50%;
+            &--product {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}

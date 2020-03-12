@@ -1,0 +1,25 @@
+include ../components/mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Green Shop
+    link(rel="stylesheet", href="../style/style.css")
+    link(rel="stylesheet", href="../fontawesome/css/all.css")
+
+  body
+    include ../components/header.pug
+    +title('grid__title','Danh sách sản phẩm')
+    .grid__content
+        +grid__left__category('grid__content--left')
+        .grid__content--right
+            +content__right__top('grid__content--right--top') 
+            .grid__content--right--product
+                each product in gridProduct
+                    +small__nosale('grid__content--right--product--item',product.img,product.name,product.price,product.del) 
+            .grid__content--right--bottom
+                each i in['Trang trước',2,3,4,5,'Trang cuối']
+                   a= i                                            
+    include ../components/footer.pug
+      
