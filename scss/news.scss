@@ -1,0 +1,31 @@
+@import '../components/mixin.scss';
+@include title('newss__title');
+.newss__content {
+    @include container();
+    margin-top: 3.5rem;
+    display: flex;
+    @include grid__left('newss__content');
+    @include news__left();
+    @include news__right__same();
+}
+
+@media (max-width:920px) {
+    #{$newsContentLeft}--hot--index {
+        flex-direction: column;
+        img {
+            width: 100%;
+        }
+        span {
+            padding-left: 0;
+            padding-top: 10px;
+        }
+    }
+    #{$newsContentLeft}--blog div {
+        padding: 0.5rem 0.2rem;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        &:nth-child(2) {
+            margin-top: 1rem;
+        }
+    }
+}
