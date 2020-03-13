@@ -1,0 +1,51 @@
+include ../components/mixin.pug
+html(lang="en")
+  head
+    include ../components/head.pug
+  body
+    include ../components/header.pug
+    +title('detailNews__title','Cây dạ lam')
+    .detailNews__content
+        +news__left('detailNews')
+        .detailNews__content--right
+          +news__right__same('detailNews','../img/img-news-1.png')
+          each p in detail_news
+               p= p
+          .detailNews__content--right--image
+             img(src="../img/img-news-2.png", alt="")
+          each item in detailNewsContentTop
+             p= item
+          .detailNews__content--right--comment
+             h3 BÌNH LUẬN(3)
+             .detailNews__content--right--comment--list
+                 .detailNews__content--right--comment--list--left
+                    .image
+                       img(class="avata" src="../img/avatar.png", alt="")
+                 .detailNews__content--right--comment--list--right
+                    each item in detailNewsComment   
+                      +detailNewsComment(item.name,item.content,item.time,item.rep)
+             .detailNews__content--right--comment--list
+                 .detailNews__content--right--comment--list--left
+                 .detailNews__content--right--comment--list--right
+                    .image
+                       img(class="avata" src="../img/avatar.png", alt="")
+                    each item in detailNewsComment   
+                      +detailNewsComment(item.name,item.content,item.time,item.rep) 
+             .detailNews__content--right--comment--list
+                 .detailNews__content--right--comment--list--left
+                    .image
+                       img(class="avata" src="../img/avatar.png", alt="")
+                 .detailNews__content--right--comment--list--right
+                    each item in detailNewsComment   
+                      +detailNewsComment(item.name,item.content,item.time,item.rep)           
+          .detailNews__content--right--input
+             h3 VIẾT BÌNH LUẬN :
+             .detailNews__content--right--input--info
+                each item in inputInfor
+                  +inputInfo(item)
+             .detailNews__content--right--input--comment
+                  label Bình luận :
+                  input(type="text")
+             a(href="#") Gửi                      
+     
+    include ../components/footer.pug

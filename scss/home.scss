@@ -64,7 +64,7 @@
             position: absolute;
             width: 0.75rem;
             height: 0.75rem;
-            background-color: #3fb871;
+            background-color: $green;
             border-radius: 50%;
             top: 90%;
             left: 50%;
@@ -86,8 +86,8 @@
         h4 {
             position: absolute;
             top: -20px;
-            color: #3fb871;
-            border-bottom: 3px solid #3fb871;
+            color: $green;
+            border-bottom: 3px solid $green;
             display: inline-block
         }
     }
@@ -115,7 +115,7 @@
                     padding: 1.5rem 1rem;
                     font-size: 14px;
                     color: white;
-                    background: #3fb871;
+                    background: $green;
                     border-radius: 50%;
                     z-index: 1;
                 }
@@ -145,7 +145,7 @@
                         a {
                             color: white;
                             text-decoration: none;
-                            background: #3fb871;
+                            background: $green;
                             padding: 0.9rem 2.2rem;
                             text-align: center;
                             border-radius: 1rem;
@@ -221,7 +221,7 @@
                         a {
                             color: white;
                             text-decoration: none;
-                            background: #3fb871;
+                            background: $green;
                             padding: 0.7rem 1rem;
                             text-align: center;
                             border-radius: 1rem;
@@ -356,8 +356,8 @@
                     bottom: 0;
                     display: inline-block;
                     padding-bottom: 1rem;
-                    color: #3fb871;
-                    border-bottom: 3px solid #3fb871;
+                    color: $green;
+                    border-bottom: 3px solid $green;
                 }
             }
             &--item {
@@ -412,8 +412,8 @@
                     bottom: 0;
                     display: inline-block;
                     padding-bottom: 1rem;
-                    color: #3fb871;
-                    border-bottom: 3px solid #3fb871;
+                    color: $green;
+                    border-bottom: 3px solid $green;
                 }
                 div {
                     margin-left: auto;
@@ -540,8 +540,8 @@
             bottom: 0;
             display: inline-block;
             padding-bottom: 1rem;
-            color: #3fb871;
-            border-bottom: 3px solid #3fb871;
+            color: $green;
+            border-bottom: 3px solid $green;
             min-width: 100px;
         }
         div {
@@ -578,7 +578,7 @@
                 color: #868685;
             }
             h5 {
-                color: #3fb871;
+                color: $green;
                 padding-top: 1rem;
             }
             p {
@@ -588,7 +588,7 @@
                 padding-top: 0.7rem;
             }
             a {
-                color: #3fb871;
+                color: $green;
                 display: block;
                 padding-top: 0.9rem;
                 text-decoration: none;

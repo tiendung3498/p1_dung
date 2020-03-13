@@ -74,7 +74,7 @@ mixin title__icon(title)
         span(class="fas fa-chevron-left")
         span(class="fas fa-chevron-right")                       
 mixin grid__left__category__title(title)
-    div(class="grid__content--left--category--title list__content--left--category--title news__content--left--category--title detailNews__content--left--category--title ")
+    div(class="grid__content--left--category--title list__content--left--category--title newss__content--left--category--title detailNews__content--left--category--title ")
         h4= title
         div    
 mixin grid__left__category1(title,items)
@@ -152,9 +152,9 @@ mixin news__left(classs)
               div(class=""+classs+"__content--left--blog active") Cây văn phòng
               each title in ['Cây phát lộc','Cây xanh','Cây trang trí','Cây','Sức khỏe','Plants','Quà tặng','Lưu niệm']
                  div= title
-mixin news__right__same(classs,src)
+mixin news__right__same(classs,src,title)
             div(class=""+classs+'__content--right--item')
-                h3 Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên
+                h3= title
                 div(class=""+classs+'__content--right--item--time')
                   span(class="far fa-calendar-minus") 20/12/2015
                   span(class="far fa-clock") 11:20:00 AM
@@ -167,3 +167,34 @@ mixin footerItem(title,items)
     ul
         each item in items
             li(class="fas fa-chevron-right")= item
+mixin inputInfo(title)
+    div
+        label(for="")= title
+        input(type="text")
+mixin detailNewsComment(name,content,time,rep)
+  div(class="cmt")
+    a(href="")= name
+    p= content
+    p= time
+    a(href="#" class="rep")= rep
+mixin cartItem(item)
+    .cart__product--item
+        img(src= item.img, alt="")
+        span(class="cart__product--item name")= item.name
+        span(class="cart__product--item price")= item.price
+        span(class="cart__product--item quantity")
+            p= item.quantity
+        span(class="cart__product--item total")= item.total
+        span(class="cart__product--item delete")
+            p(class="fas fa-trash-alt")           
+mixin bill(title,price)
+    .cart__product--bill--info--item
+        .cart__product--bill--info--item--title= title
+        .cart__product--bill--info--item--price= price
+mixin input(input1,input2)
+    .register__content--input
+        each label in [input1,input2]     
+            .register__content--input--text
+                label= label
+                    b *
+                input(type="text")

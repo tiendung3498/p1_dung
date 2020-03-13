@@ -37,24 +37,24 @@
                     h3.price {
                         color: red;
                         font-weight: 400;
-                        border-bottom: 1px solid $xam;
+                        border-bottom: 1px solid $gray;
                         padding: 1.25rem 0;
                         del {
-                            color: $xam;
+                            color: $gray;
                             font-size: 1rem;
                             padding-left: 1rem;
                         }
                     }
                     &--detail {
                         font-size: 14px;
-                        color: $xamnhat;
+                        color: $beige;
                         padding: 1.5rem 0;
-                        border-bottom: 1px solid $xam;
+                        border-bottom: 1px solid $gray;
                         line-height: 1rem;
                     }
                     &--amount {
                         display: flex;
-                        border-bottom: 1px solid $xam;
+                        border-bottom: 1px solid $gray;
                         padding: 1.5rem 0 2rem 0;
                         p {
                             margin-top: 10px;
@@ -66,7 +66,7 @@
                             cursor: pointer;
                             width: 2.65rem;
                             height: 2.65rem;
-                            border: 1px solid $xam;
+                            border: 1px solid $gray;
                             text-align: center;
                             padding: 0.75rem 0;
                         }
@@ -74,7 +74,7 @@
                             width: 5.3rem;
                             margin: 0 0.5rem;
                             height: 2.65rem;
-                            border: 1px solid $xam;
+                            border: 1px solid $gray;
                             text-align: center;
                             padding: 0.75rem 0;
                         }
@@ -96,8 +96,8 @@
                         }
                         span {
                             padding: 2px 7px;
-                            color: $xamnhat;
-                            border: 1px solid $xamnhat;
+                            color: $beige;
+                            border: 1px solid $beige;
                             margin-left: 0.5rem;
                             border-radius: 3px;
                             position: relative;
@@ -106,8 +106,8 @@
                                 width: 5px;
                                 height: 5px;
                                 background-color: white;
-                                border-left: 1px solid $xamnhat;
-                                border-top: 1px solid $xamnhat;
+                                border-left: 1px solid $beige;
+                                border-top: 1px solid $beige;
                                 transform: rotate(-45deg);
                                 position: absolute;
                                 top: 6.5px;
@@ -132,7 +132,7 @@
                             i {
                                 background-color: white;
                                 color: #dd4339;
-                                border-color: $xamnhat;
+                                border-color: $beige;
                                 font-weight: bolder;
                             }
                         }
@@ -165,18 +165,18 @@
                         cursor: pointer;
                         &:nth-child(1) {
                             border-top: 2px solid black;
-                            border-right: 1px solid $xam;
-                            border-left: 1px solid $xam;
+                            border-right: 1px solid $gray;
+                            border-left: 1px solid $gray;
                             border-bottom: 1px solid white;
-                            color: #3fb871;
+                            color: $green;
                         }
                     }
                 }
                 &--content {
                     width: 100%;
-                    border: 1px solid $xam;
+                    border: 1px solid $gray;
                     padding: 3.25rem 2.25rem 2.25rem 2.75rem;
-                    color: $xamnhat;
+                    color: $beige;
                     font-size: 0.8rem;
                     P {
                         margin-bottom: 1.5rem;
@@ -190,7 +190,7 @@
             &--title {
                 position: relative;
                 display: flex;
-                border-bottom: 1px solid $xam;
+                border-bottom: 1px solid $gray;
                 margin-top: 5rem;
                 margin-bottom: 3rem;
                 @include title__icon();
