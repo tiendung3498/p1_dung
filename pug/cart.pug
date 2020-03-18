@@ -1,0 +1,25 @@
+include ../components/mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include ../components/head.pug
+  body
+    include ../components/header.pug
+    +title('cart__title','Giỏ hàng')
+    h3.cart__title--name GIỎ HÀNG
+    .cart__product
+        .cart__product--title
+           each titleCart in titlesCart
+                span(class= "cart__product--title "+Object.keys(titleCart)[0])= Object.values(titleCart)[0]
+        each item in itemsCart
+            +cartItem(item)
+        .cart__product--action
+            a(href="#" class="cancel") HUỶ ĐƠN HÀNG
+            a(href="#" class="buy") TIẾP TỤC MUA
+        .cart__product--bill
+            .cart__product--bill--info
+                each item in billCart
+                    +bill(item.title,item.price)
+                a(href="#" class="cart__product--bill--info--buy ") THANH TOÁN         
+    include ../components/footer.pug
+    

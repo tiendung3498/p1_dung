@@ -552,3 +552,13 @@
     left: 0;
     top: 0;
 }
+
+@mixin quantity() {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    border: 1px solid $gray;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 14px;
+}
