@@ -1,0 +1,62 @@
+.contact__title {
+  width: 80%;
+  margin: 0 auto; }
+  .contact__title div {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #868685; }
+    .contact__title div a {
+      color: #3fb871;
+      text-decoration: none;
+      min-width: 100px; }
+
+.contact__map {
+  width: 100%;
+  margin: 3rem 0;
+  height: 500px; }
+  .contact__map img {
+    width: 100%;
+    height: 100%; }
+
+.contact__input {
+  color: #868685;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  .contact__input h3 {
+    color: #3fb871; }
+  .contact__input--left {
+    width: 45%; }
+    .contact__input--left--text {
+      width: 100%;
+      margin: 2rem 0; }
+      .contact__input--left--text label {
+        display: block;
+        padding-bottom: 10px; }
+        .contact__input--left--text label b {
+          color: red; }
+      .contact__input--left--text input {
+        width: 100%;
+        height: 45px; }
+      .contact__input--left--text textarea {
+        width: 100%;
+        height: 150px; }
+  .contact__input--right {
+    width: 45%; }
+    .contact__input--right img {
+      width: 100%; }
+    .contact__input--right p {
+      font-size: 0.7rem;
+      line-height: 1.5rem;
+      padding: 1rem 0; }
+    .contact__input--right span {
+      font-size: 0.8rem;
+      display: block;
+      line-height: 2rem;
+      font-weight: 100; }
+      .contact__input--right span::before {
+        color: #3fb871;
+        padding-right: 10px;
+        font-weight: bold;
+        font-size: 0.85rem; }
