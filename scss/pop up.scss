@@ -1,0 +1,82 @@
+@import "../components/mixin.scss";
+@import "font.css";
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+.pop__up {
+    background-color: #f1eeeb;
+    width: 60%;
+    margin: 5rem auto;
+    position: relative;
+    display: flex;
+    &--left {
+        width: 40%;
+        padding: 5rem 2rem;
+    }
+    &--right {
+        padding-top: 5rem;
+        width: 45%;
+        margin: 0 auto;
+        &--top {
+            font-size: 1.7rem;
+            font-family: "Charm", cursive;
+            color: #868685;
+            margin-bottom: 5px;
+        }
+        &--title {
+            color: $green;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-family: "Roboto";
+        }
+        &--input {
+            position: relative;
+            input {
+                width: 81%;
+                padding-left: 10px;
+                height: 40px;
+            }
+            label {
+                position: absolute;
+                background: $green;
+                height: 40px;
+                line-height: 40px;
+                font-size: 15px;
+                padding: 0 15px;
+                color: white;
+            }
+        }
+        p {
+            margin-top: 1rem;
+            color: #535350;
+            line-height: 1.4rem;
+        }
+        &--check {
+            margin-top: 2.5rem;
+            input {
+                display: none;
+            }
+            input+label {
+                display: block;
+                cursor: pointer;
+                position: relative;
+                padding-left: 1.5rem;
+                color: #535350;
+            }
+            label::before {
+                @include check();
+            }
+        }
+    }
+    .pop__up--close {
+        color: $green;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+}

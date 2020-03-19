@@ -1,0 +1,74 @@
+@import url(font.css);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto; }
+
+.pop__up {
+  background-color: #f1eeeb;
+  width: 60%;
+  margin: 5rem auto;
+  position: relative;
+  display: flex; }
+  .pop__up--left {
+    width: 40%;
+    padding: 5rem 2rem; }
+  .pop__up--right {
+    padding-top: 5rem;
+    width: 45%;
+    margin: 0 auto; }
+    .pop__up--right--top {
+      font-size: 1.7rem;
+      font-family: "Charm", cursive;
+      color: #868685;
+      margin-bottom: 5px; }
+    .pop__up--right--title {
+      color: #3fb871;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      font-family: "Roboto"; }
+    .pop__up--right--input {
+      position: relative; }
+      .pop__up--right--input input {
+        width: 81%;
+        padding-left: 10px;
+        height: 40px; }
+      .pop__up--right--input label {
+        position: absolute;
+        background: #3fb871;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+        padding: 0 15px;
+        color: white; }
+    .pop__up--right p {
+      margin-top: 1rem;
+      color: #535350;
+      line-height: 1.4rem; }
+    .pop__up--right--check {
+      margin-top: 2.5rem; }
+      .pop__up--right--check input {
+        display: none; }
+      .pop__up--right--check input + label {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        padding-left: 1.5rem;
+        color: #535350; }
+      .pop__up--right--check label::before {
+        content: "";
+        display: block;
+        width: 14px;
+        height: 14px;
+        border: 1px solid #d7d7d7;
+        background: white;
+        position: absolute;
+        left: 0;
+        top: 0; }
+  .pop__up .pop__up--close {
+    color: #3fb871;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer; }

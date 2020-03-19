@@ -1,0 +1,26 @@
+include ../components/mixin.pug
+html(lang="en")
+  head
+    include ../components/head.pug
+  body
+    include ../components/header.pug
+    +title('login__title','Đăng nhập')
+    .login__content
+        .login__content--left
+            h3 THÔNG TIN CÁ NHÂN
+            each labell in ['Email của bạn','Mật khẩu']
+                .login__content--left--input
+                   label= labell
+                   input(type="text")
+            .login__content--left--check
+                input(type="text" id="check")
+                label(for="check") Ghi nhớ tài khoản
+                a Bạn quên mật khẩu ?
+            a(href="#" class="login") Đăng nhập    
+        .login__content--right
+            h3 BẠN CHƯA CÓ TÀI KHOẢN
+            p Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+            a(href="#" class="login") ĐĂNG KÝ
+
+    include ../components/footer.pug
+    

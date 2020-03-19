@@ -1,0 +1,22 @@
+include ../components/mixin.pug
+html(lang="en")
+  head
+    include ../components/head.pug
+  body
+    include ../components/header.pug
+    +title('register__title','Đăng ký')
+    .register__content 
+        h3 THÔNG TIN CÁ NHÂN  
+        +input('Họ và tên','Số điện thoại')
+        +input('Địa chỉ email','Website của bạns')  
+        .register__content--check
+            input(type="checkbox" id="check")
+            label(for="check") Đăng ký nhận thông tin qua email
+        h3 THÔNG TIN Tài KHOẢN
+        +input('Mật khẩu','Nhập lại mật khẩu')
+        .register__content--action
+            a(href="#") QUAY LẠI
+            a(href="#") ĐĂNG KÝ
+                
+    include ../components/footer.pug
+    

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include ../components/head.pug
+  body
+      .pop__up
+          .pop__up--left
+               img(src="../img/pop-up.png", alt="")
+          .pop__up--right
+               .pop__up--right--top Nhận tin tức từ chúng tôi
+               h2.pop__up--right--title đăng ký email ngay hôm nay
+               .pop__up--right--input
+                    input(type="text" id="inputemail" placeholder="Nhập email của bạn vào đây")
+                    label(for="inputemail" class="fas fa-paper-plane")
+               p.pop__up--right--content Đăng ký email ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi
+               .pop__up--right--check
+                    input(type="checkbox" id="check")
+                    label(for="check") Không hiển thị lại thông báo này nữa
+          .pop__up--close X
+           
