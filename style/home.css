@@ -494,6 +494,8 @@
       margin-bottom: 1rem; }
       .hotproduct__grid--left--small--new, .hotproduct__grid--right--small--new, .hotproduct__grid--right--small--newred, .saleproduct__grid--right--grid--item--new, .saleproduct__grid--right--grid--item--newred, .newproduct__grid--item--new {
         display: none; }
+      .hotproduct__grid--left--small--image p, .hotproduct__grid--right--small--image p, .saleproduct__grid--right--grid--item--image p, .newproduct__grid--item--image p {
+        display: none; }
     .hotproduct__grid--right {
       width: 100%; }
   .saleproduct__grid {

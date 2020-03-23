@@ -6,6 +6,9 @@
     box-sizing: border-box;
     font-family: Roboto;
 }
+header {
+    border-bottom: 1px solid $green;
+}
 
 .header__top {
     background-color: black;

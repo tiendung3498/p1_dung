@@ -1343,7 +1343,6 @@ footer {
       footer .footer__top .footer__top--right-input {
         width: 100%; }
   footer .footer__content {
-    width: 100%;
     flex-direction: column; }
     footer .footer__content .footer__content--left {
       width: 100%; }
@@ -1857,6 +1856,8 @@ footer {
       margin-bottom: 1rem; }
       .hotproduct__grid--left--small--new, .hotproduct__grid--right--small--new, .hotproduct__grid--right--small--newred, .saleproduct__grid--right--grid--item--new, .saleproduct__grid--right--grid--item--newred, .newproduct__grid--item--new, .grid__content--right--product--item--new, .list__content--right--product--item--new {
         display: none; }
+      .hotproduct__grid--left--small--image p, .hotproduct__grid--right--small--image p, .saleproduct__grid--right--grid--item--image p, .newproduct__grid--item--image p {
+        display: none; }
     .hotproduct__grid--right {
       width: 100%; }
   .saleproduct__grid {
@@ -2120,6 +2121,9 @@ footer {
   box-sizing: border-box;
   font-family: Roboto; }
 
+header{
+   border-bottom: 1px solid #3fb871;
+}
 .header__top {
   background-color: black; }
   .header__top--container {
@@ -2159,7 +2163,7 @@ footer {
         color: #817c79; }
 
 .header__background {
-  background: url("../img/bg-banner.png");
+  background: url("../img/bg-banner.png") white;
   background-size: cover;
   height: 150px; }
   .header__background .header__content {

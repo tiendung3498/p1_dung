@@ -670,6 +670,11 @@
                 &--new {
                     display: none;
                 }
+                &--image {
+                    p {
+                        display: none;
+                    }
+                }
             }
         }
         &--right {
