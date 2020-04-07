@@ -1,5 +1,5 @@
-@import '../components/mixin.scss';
-@import '../components/variable.scss';
+@import './mixin/mixin.scss';
+@import './components/variable.scss';
 @import'home.scss';
 @include title('list__title');
 .list__content {

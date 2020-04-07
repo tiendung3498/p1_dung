@@ -1,5 +1,5 @@
-@import '../components/variable.scss';
-@import '../components/mixin.scss';
+@import 'variable.scss';
+@import './mixin/mixin.scss';
 * {
     margin: 0;
     padding: 0;

@@ -1,4 +1,4 @@
-@import '../components/mixin.scss';
+@import './mixin/mixin.scss';
 @include title('contact__title');
 .contact__map {
     width: 100%;

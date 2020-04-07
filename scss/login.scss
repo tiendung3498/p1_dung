@@ -1,4 +1,4 @@
-@import '../components/mixin.scss';
+@import './mixin/mixin.scss';
 @include title('login__title');
 .login__content {
     @include container();

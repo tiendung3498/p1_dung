@@ -1,9 +1,9 @@
-include ../components/mixin.pug
+include ./mixin/mixin.pug
 html(lang="en")
   head
-    include ../components/head.pug
+    include ./components/head.pug
   body
-    include ../components/header.pug
+    include ./components/header.pug
     +title('detailNews__title','Cây dạ lam')
     .detailNews__content
         +news__left('detailNews')
@@ -48,4 +48,4 @@ html(lang="en")
                   input(type="text")
              a(href="#") Gửi                      
      
-    include ../components/footer.pug
+    include ./components/footer.pug

@@ -1,11 +1,11 @@
-include ../components/mixin.pug
+include ./mixin/mixin.pug
 <!DOCTYPE html>
 html(lang="en")
   head
-     include ../components/head.pug
+     include ./components/head.pug
 
   body
-    include ../components/header.pug
+    include ./components/header.pug
     +title('list__title','Danh sách sản phẩm')
     .list__content   
         +grid__left__category('list__content--left')
@@ -17,5 +17,5 @@ html(lang="en")
           .list__content--right--bottom
               each i in['Trang trước',2,3,4,5,'Trang cuối']
                   a= i 
-    include ../components/footer.pug
+    include ./components/footer.pug
     

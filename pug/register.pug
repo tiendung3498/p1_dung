@@ -1,9 +1,9 @@
-include ../components/mixin.pug
+include ./mixin/mixin.pug
 html(lang="en")
   head
-    include ../components/head.pug
+    include ./components/head.pug
   body
-    include ../components/header.pug
+    include ./components/header.pug
     +title('register__title','Đăng ký')
     .register__content 
         h3 THÔNG TIN CÁ NHÂN  
@@ -18,5 +18,5 @@ html(lang="en")
             a(href="#") QUAY LẠI
             a(href="#") ĐĂNG KÝ
                 
-    include ../components/footer.pug
+    include ./components/footer.pug
     

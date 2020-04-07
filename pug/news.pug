@@ -1,10 +1,10 @@
-include ../components/mixin.pug
+include ./mixin/mixin.pug
 <!DOCTYPE html>
 html(lang="en")
   head
-    include ../components/head.pug
+    include ./components/head.pug
   body
-    include ../components/header.pug
+    include ./components/header.pug
     +title('newss__title','Cây dạ lam')
     .newss__content
         +news__left('newss')
@@ -14,4 +14,4 @@ html(lang="en")
             .newss__content--right--bottom
               each i in['Trang trước',2,3,4,5,'Trang cuối']
                 a= i                       
-    include ../components/footer.pug
+    include ./components/footer.pug

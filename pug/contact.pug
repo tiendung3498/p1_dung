@@ -1,9 +1,9 @@
-include ../components/mixin.pug
+include ./mixin/mixin.pug
 html(lang="en")
   head
-    include ../components/head.pug
+    include ./components/head.pug
   body
-    include ../components/header.pug
+    include ./components/header.pug
     +title('contact__title','Liên hệ')
     .contact__map
         img(src="../img/lien-he.png", alt="")
@@ -25,5 +25,5 @@ html(lang="en")
             span(class="fas fa-mobile-alt") Điện thoại : (84-4) 66.558.868
             span(class="far fa-envelope") Email : info@dkt.com.vn 
             
-    include ../components/footer.pug
+    include ./components/footer.pug
     
