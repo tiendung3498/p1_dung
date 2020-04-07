@@ -1,38 +1,38 @@
 include array.pug
 mixin big(classs,img,title,price,del)
     div(class= classs) NEW
-    .hotproduct__grid--left--big--image
+    .hotproduct__grid--big--image
         img(src=img, alt="")
         div
         p
             a(href="#") Mua Ngay
             a(href="" class="-search fas fa-search")
-    p.hotproduct__grid--left--big--title= title
+    p.hotproduct__grid--big--title= title
         span
             i(class="fas fa-star")
             i(class="fas fa-star")
             i(class="fas fa-star")
             i(class="fas fa-star")
             i(class="fas fa-star-half-alt")
-    p.hotproduct__grid--left--big--price= price
+    p.hotproduct__grid--big--price= price
         del= del
 mixin small(classs,img,title,price,del)
-    .hotproduct__grid--left--small
+    .hotproduct__grid--small
         div(class= classs) NEW
-        .hotproduct__grid--left--small--image
+        .hotproduct__grid--small--image
             img(src=img, alt="")
             div
             p
                 a(href="") Mua Ngay
                 a(class="-search fas fa-search")
-        p.hotproduct__grid--left--small--title= title
+        p.hotproduct__grid--small--title= title
             span
                 i(class="fas fa-star")
                 i(class="fas fa-star")
                 i(class="fas fa-star")
                 i(class="fas fa-star")
                 i(class="fas fa-star-half-alt")
-        p.hotproduct__grid--left--small--price= price
+        p.hotproduct__grid--small--price= price
             del= del
 
 mixin small__nosale(classs,img,title,price,del)
