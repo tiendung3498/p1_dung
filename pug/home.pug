@@ -1,10 +1,5 @@
-include ./mixin/mixin.pug
-<!DOCTYPE html>
-html(lang="en")
-  head
-    include ./components/head.pug
-  body
-    include ./components/header.pug
+extends ./templates/main.pug
+block content
     section.banner
       .banner__slides
         each i in [1,2,3]
@@ -87,4 +82,4 @@ html(lang="en")
               +item('../img/img-news-1.png')
               +item('../img/img-news-2.png')
               +item('../img/img-1.png')
-    include ./components/footer.pug               
+             

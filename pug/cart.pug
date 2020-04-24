@@ -1,10 +1,5 @@
-include ./mixin/mixin.pug
-<!DOCTYPE html>
-html(lang="en")
-  head
-    include ./components/head.pug
-  body
-    include ./components/header.pug
+extends ./templates/main.pug
+block content
     +title('cart__title','Giỏ hàng')
     h3.cart__title--name GIỎ HÀNG
     .cart__product
@@ -21,5 +16,4 @@ html(lang="en")
                 each item in billCart
                     +bill(item.title,item.price)
                 a(href="#" class="cart__product--bill--info--buy ") THANH TOÁN         
-    include ./components/footer.pug
     

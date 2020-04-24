@@ -1,0 +1,16 @@
+include ../mixin/mixin.pug
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include ../components/head.pug
+  body
+    include ../components/header.pug
+    block content
+      block category
+        +news__left('newss')
+        block category__right
+           +content__right__top('grid__content--right--top')
+      block news__same
+        +news__right__same('newss',item.img,item.title)
+           
+    include ../components/footer.pug

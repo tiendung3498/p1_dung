@@ -1,9 +1,5 @@
-include ./mixin/mixin.pug
-html(lang="en")
-  head
-    include ./components/head.pug
-  body
-    include ./components/header.pug
+extends ./templates/main.pug
+block content
     +title('contact__title','Liên hệ')
     .contact__map
         img(src="../img/lien-he.png", alt="")
@@ -24,6 +20,4 @@ html(lang="en")
             p DKT được thành lập với niềm đam mê và khát vọng thành công trong lĩnh vực Thương mại điện tử.Chúng tôi đã và đang khẳng định được vị trí hàng đầu bằng những sản phẩm
             span(class="fas fa-mobile-alt") Điện thoại : (84-4) 66.558.868
             span(class="far fa-envelope") Email : info@dkt.com.vn 
-            
-    include ./components/footer.pug
     

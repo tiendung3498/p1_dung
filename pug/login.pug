@@ -1,9 +1,5 @@
-include ./mixin/mixin.pug
-html(lang="en")
-  head
-    include ./components/head.pug
-  body
-    include ./components/header.pug
+extends ./templates/main.pug
+block content
     +title('login__title','Đăng nhập')
     .login__content
         .login__content--left
@@ -21,6 +17,4 @@ html(lang="en")
             h3 BẠN CHƯA CÓ TÀI KHOẢN
             p Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
             a(href="#" class="login") ĐĂNG KÝ
-
-    include ./components/footer.pug
     

@@ -1,14 +1,12 @@
-include ./mixin/mixin.pug
-html(lang="en")
-  head
-    include ./components/head.pug
-  body
-    include ./components/header.pug
+extends ./templates/main.pug
+block content
     +title('detailNews__title','Cây dạ lam')
     .detailNews__content
-        +news__left('detailNews')
+        block category
+          +news__left('detailNews')
         .detailNews__content--right
-          +news__right__same('detailNews','../img/img-news-1.png')
+          block news_same
+            +news__right__same('detailNews','../img/img-news-1.png','Cách bố trí hoa chậu trước cửa ấn tượng ngay lần đầu tiên')
           each p in detail_news
                p= p
           .detailNews__content--right--image
@@ -47,5 +45,3 @@ html(lang="en")
                   label Bình luận :
                   input(type="text")
              a(href="#") Gửi                      
-     
-    include ./components/footer.pug

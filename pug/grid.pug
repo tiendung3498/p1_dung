@@ -1,20 +1,16 @@
-include ./mixin/mixin.pug
-<!DOCTYPE html>
-html(lang="en")
-  head
-    include ./components/head.pug
-  body
-    include ./components/header.pug
+extends ./templates/main.pug
+block content
     +title('grid__title','Danh sách sản phẩm')
     .grid__content
-        +grid__left__category('grid__content--left')
+        block category
+            +grid__left__category('grid__content--left')
         .grid__content--right
-            +content__right__top('grid__content--right--top') 
+            block category__right
+               +content__right__top('grid__content--right--top') 
             .grid__content--right--product
                 each product in gridProduct
                     +small__nosale('grid__content--right--product--item',product.img,product.name,product.price,product.del) 
             .grid__content--right--bottom
                 each i in['Trang trước',2,3,4,5,'Trang cuối']
                    a= i                                            
-    include ./components/footer.pug
       
